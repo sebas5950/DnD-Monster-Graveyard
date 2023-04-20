@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html LANG="en">
+
+<head>
+  <title>DnD Graveyard</title>
+  <link rel="stylesheet" type="text/css" href="./style.css" />
+  <script defer src="index.js"></script>
+</head>
+
+<body>
+  <!-- <div class="bg-image"></div> -->
+  <div class="img-container">
+    <div class="inner-conatainer">
+      <h1 id="site-name">WHAT KILLED YOU!?</h1>
+    </div>
+  </div>
+
+
+  
+  <form id="monster-form">
+    <div id="monster-submit">
+      <!-- <label for="mname">Monster</label> -->
+      <button id="monster-randomizer" class="random-btn">IDK...maybe this?!</button>
+      <input type="text" id="monster-search" name="monster" placeholder="Enter Monster">
+      <input class="search-button" type="submit" value="Search">
+    </div>
+    </form>
+ 
+
+  <div id="flexbox-container">
+    <div id="monster-info">
+      <h2 id="monster-name">Monster Name</h2>
+      </h2>
+      <p id="description">
+        Description
+      </p>
+      <button data-modal-target=".modal-container" class="collapsible" id="expanded-info-button">Details</button>
+      <div class="modal-container" id="modal_container">
+        <div id="content" class="modal">
+          <button data-modal-close id="close">&times;</button>
+          <h1 id="creature-name"></h1>
+          <h2 id="monster-meta"></h2>
+          <p id="expanded-description"></p>
+        </div>
+      </div>
+
+      <div  id="overlay"></div>
+
+    </div>
+
+    <div id="monster-pic">
+      <img id="monster-image"
+        src="https://cdn.pixabay.com/photo/2020/07/30/12/06/question-mark-5450223_1280.jpg" />
+      <h4>Total Kills: <span id="kill-count">0</span></h4>
+      <button id="kill-button" class="btn">Death</button>
+    </div>
+
+
+  </div>
+  <div id="graveyard">
+      <form id="grave-form">
+        <label for="character-filler" id="form-name"><strong>Fill the Graveyard</strong></label>
+        <div class="holder-grave">
+        
+    
+        <input type="text" id="character-name" class="form-input" name="charName" placeholder="Character Name">
+        <input type="text" id="character-race" class="form-input" name="charRace" placeholder="Character Race">
+        <input type="text" id="character-class" class="form-input" name="charClass" placeholder="Character Class">
+        <input type="text" id="character-level" class="form-input" name="charLevel" placeholder="Character Level">
+
+        <input type="submit" value="Remember the Fallen" id="character-submit">
+        </div>
+      </form>
+      <nav id="graves"></nav>
+  </div>
+</body>
+
+</html>
